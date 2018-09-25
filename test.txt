@@ -1,1 +1,4 @@
-just for testing github
+$template TmplAuth, "/var/log/rsyslog_custom/%HOSTNAME%/%PROGRAMNAME%.log" 
+$template TmplMsg, "/var/log/rsyslog_custom/%HOSTNAME%/%PROGRAMNAME%.log" 
+authpriv.*   ?TmplAuth
+*.info,mail.none,authpriv.none,cron.none   ?TmplMsg
